@@ -1,0 +1,14 @@
+# Ignore the virtual environment folder
+my_env/
+venv/
+env/
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+
+# Ignore the output file (users should generate this themselves)
+data/scrubbed.jsonl
+
+# Ignore system files
+.DS_Store
