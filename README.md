@@ -35,8 +35,8 @@ The tool automatically replaces sensitive data with the following standardized t
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/yourusername/pii-scrubber.git](https://github.com/yourusername/pii-scrubber.git)
-    cd pii-scrubber
+    git clone [https://github.com/Vaishnavitayde2036/PII_SCRUBBER_PROJECT.git](https://github.com/Vaishnavitayde2036/PII_SCRUBBER_PROJECT.git)
+    cd PII_SCRUBBER_PROJECT
     ```
 
 2.  **Create a Virtual Environment:**
@@ -50,15 +50,32 @@ The tool automatically replaces sensitive data with the following standardized t
     pip install -r requirements.txt
     ```
 
-4.  **Download the NLP Model:**
-    ```bash
-    python -m spacy download en_core_web_sm
-    ```
-
 ## 💻 Usage
 
-The project includes a convenient shortcut command `pii_scrub`.
+To run the PII SCRUBBER, simply run the module from the root directory:
 
-**Basic Command:**
-```powershell
-.\pii_scrub --in data/input_file.jsonl --out data/output_file.jsonl
+```bash
+python -m src.main --input data/journals.jsonl --output data/scrubbed.jsonl
+```
+## 📂 Project Structure
+
+```text
+PII_SCRUBBER_PROJECT/
+├── data/
+│   ├── journals.jsonl       # Raw input data
+│   └── scrubbed.jsonl       # Processed output (Generated)
+├── src/
+│   ├── __init__.py
+│   ├── main.py              # Entry point and I/O handling
+│   ├── scrubber.py          # Core PII removal logic and Regex patterns
+│   └── patterns.py          # (Optional) Extended pattern definitions
+├── tests/
+│   └── test_scrubber.py     # Pytest unit tests
+├── .gitignore
+├── README.md
+└── requirements.txt
+```
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
